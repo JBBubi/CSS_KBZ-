@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Positionierungs-Demo</title>
     <style>
-        /* Allgemeine Stile für die Kacheln */
         .tile {
             width: 150px;
             height: 100px;
@@ -15,7 +14,6 @@
             display: none;
         }
 
-        /* Stile für die verschiedenen Positionierungen */
         .tile.static {
             position: static;
         }
@@ -42,13 +40,11 @@
 
 <body>
 
-    <!-- Buttons -->
     <button onclick="showTile('static')">Zeige Static</button>
     <button onclick="showTile('relative')">Zeige Relative</button>
     <button onclick="showTile('absolute')">Zeige Absolute</button>
     <button onclick="showTile('fixed')">Zeige Fixed</button>
 
-    <!-- Kacheln zur Veranschaulichung -->
     <div class="tile static">
         Position: Static<br>
         Standardposition
@@ -71,11 +67,9 @@
 
     <script>
         function showTile(type) {
-            // Alle Kacheln ausblenden
             document.querySelectorAll('.tile').forEach(tile => {
                 tile.style.display = 'none';
             });
-            // Gewählte Kachel anzeigen
             document.querySelector(`.tile.${type}`).style.display = 'block';
         }
     </script>
